@@ -66,6 +66,30 @@ app.delete("/:id", async (req: Request, res: Response) => {
 
 });
 
+app.post("/createUsersWithCars", async (req: Request, res: Response) => {
+    const {username, email, password, cars} = req.body;
+    try {
+        const result = await prisma.$transaction(async (tx) => {
+            const user = await tx.user.create({
+                data: {
+                    username,
+                    email,
+                    password,
+                    cars: {
+                        create: cars.map((car: {model: string; year: number}) => ({
+                            model: car.model,
+                            year: car.year
+                        }))
+                    }
+                }
+            });
+            return user;
+        });
+        res.json(result);
+    } catch (error) {
+        res.status(500).json({ error: "Failed to create user with cars" });
+    }
+});
 
 app.listen(3001, () => {
     console.log("Server is running on port 3001");
