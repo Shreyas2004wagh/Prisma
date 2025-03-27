@@ -1,0 +1,26 @@
+{
+  "name": "prisma",
+  "version": "1.0.0",
+  "description": "prisma",
+  "type": "module",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "nodemon --exec ts-node-esm index.ts",
+    "start": "node --loader ts-node/esm index.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.5.0",
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.13.13",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9",
+    "prisma": "^6.5.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^5.8.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.13",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  }
+}
