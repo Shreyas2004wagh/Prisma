@@ -9,18 +9,15 @@
     "start": "node --loader ts-node/esm index.ts"
   },
   "dependencies": {
-    "@prisma/client": "^6.5.0",
-    "@types/express": "^5.0.1",
-    "@types/node": "^22.13.13",
+    "@prisma/client": "^6.8.2",
+    "@types/express": "^5.0.2",
     "express": "^4.21.2",
-    "nodemon": "^3.1.9",
-    "prisma": "^6.5.0",
-    "ts-node": "^10.0.0",
-    "typescript": "^5.8.2"
+    "nodemon": "^3.1.9"
   },
   "devDependencies": {
-    "@types/node": "^22.13.13",
+    "@types/node": "^22.15.18",
+    "prisma": "^6.8.2",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.3"
   }
 }
